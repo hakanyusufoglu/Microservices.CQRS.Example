@@ -1,7 +1,15 @@
+using Microservices.Tutorial.CQRS.Example.ManuelCQRS.Handlers.CommandHandlers;
+using Microservices.Tutorial.CQRS.Example.ManuelCQRS.Handlers.QueryHandlers;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddSingleton<CreateProductCommandHandler>()
+                .AddSingleton<DeleteProductCommandHandler>()
+                .AddSingleton<GetAllProductQueryHandler>()
+                .AddSingleton<GetByIdProductQueryHandler>();
 
 var app = builder.Build();
 
