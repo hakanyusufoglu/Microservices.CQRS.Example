@@ -7,8 +7,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="ManuelCQRS\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="ManuelCQRS\Commands\Responses\" />
+    <Folder Include="ManuelCQRS\Handlers\CommandHandlers\" />
+    <Folder Include="ManuelCQRS\Handlers\QueryHandlers\" />
+    <Folder Include="ManuelCQRS\Queries\Responses\" />
+    <Folder Include="ManuelCQRS\Queries\Requests\" />
     <Folder Include="MediatRCQRS\" />
+    <Folder Include="Models\" />
   </ItemGroup>
 
 </Project>
