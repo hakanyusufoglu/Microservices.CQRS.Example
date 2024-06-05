@@ -14,6 +14,10 @@ builder.Services.AddSingleton<CreateProductCommandHandler>()
         .AddSingleton<GetByIdProductQueryHandler>();
 #endregion
 
+//MediatR
+#region
+builder.Services.AddMediatR(conf=>conf.RegisterServicesFromAssembly(typeof(Program).Assembly));
+#endregion
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
